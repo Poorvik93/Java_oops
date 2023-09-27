@@ -1,0 +1,49 @@
+// Class definition for Frog
+class Frog {
+    // Private member variables for name and age
+    private String name;
+    private int age;
+
+    // Method to set the name of the frog
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Method to set the age of the frog
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // Method to get the name of the frog
+    public String getName() {
+        return name;
+    }
+
+    // Method to get the age of the frog
+    public int getAge() {
+        return age;
+    }
+
+    // Method to set both name and age of the frog
+    public void setInfo(String name, int age) {
+        setName(name);
+        setAge(age);
+    }
+}
+
+
+// Main class named FrogApp
+public class FrogApp {
+    public static void main(String[] args) {
+        // Create an instance of the Frog class
+        Frog frog = new Frog();
+
+        // Set the name and age of the frog
+        frog.setName("Bertie");
+        frog.setAge(22);
+
+        // Display the age and name of the frog
+        System.out.println("Frog's Age: " + frog.getAge());
+        System.out.println("Frog's Name: " + frog.getName());
+    }
+}
