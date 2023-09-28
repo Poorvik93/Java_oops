@@ -1,0 +1,38 @@
+// Class named 'constructor'
+class constructor {
+    // Private member variables for name and code
+    private String name;
+    private int code;
+
+    // First constructor - no parameters
+    public constructor() {
+        name = "Poorvik"; // Default name for the first constructor
+        System.out.println(name + " First constructor is running:");
+    }
+
+    // Second constructor - accepts a name
+    public constructor(String name) {
+        this.name = name; // Assign the provided name
+        System.out.println(name + " Second constructor is running:");
+    }
+
+    // Third constructor - accepts a name and a code
+    public constructor(String name, int code) {
+        System.out.println(name + " " +code + " Third constructor is running:");
+        this.name = name; // Assign the provided name
+        this.code = code; // Assign the provided code
+    }
+}
+
+
+
+public class constructorApp {
+    public static void main(String[] args) {
+        // Create an instance using the first constructor
+        constructor c1 = new constructor();
+        // Create an instance using the first overloaded constructor
+        constructor c2 = new constructor("Poorvik"); 
+        // Create an instance using the second overloaded constructor
+        constructor c3 = new constructor("Poorvik", 58); 
+    }
+}
