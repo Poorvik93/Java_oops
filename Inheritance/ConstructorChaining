@@ -1,0 +1,90 @@
+public class Laptop {
+    String processor = "i3"; // Default processor
+    String brand = "Dell"; // Default brand
+    int cost = 200000; // Default cost
+
+    // Method to display laptop details
+    void display() {
+        System.out.println("Processor: " + processor);
+        System.out.println("Brand: " + brand);
+        System.out.println("Cost: " + cost);
+    }
+
+    // Zero-argument constructor
+    public Laptop() {
+        // Call another constructor with a default processor
+        this("i5");
+        System.out.println("Zero parameterized constructor");
+    }
+
+    // One-argument constructor
+    public Laptop(String processor) {
+        // Call another constructor with a default processor and brand
+        this("i3", "hp");
+        this.processor = processor;
+        System.out.println("One parameterized constructor");
+    }
+
+    // Two-argument constructor
+    public Laptop(String processor, String brand) {
+        // Call another constructor with a default processor, brand, and cost
+        this("i7", "Lenovo", 62000);
+        this.processor = processor;
+        this.brand = brand;
+        System.out.println("Two parameterized constructor");
+    }
+
+    // Three-argument constructor
+    public Laptop(String processor, String brand, int cost) {
+        this.processor = processor;
+        this.brand = brand;
+        this.cost = cost;
+        System.out.println("Three parameterized constructor");
+    }
+}
+
+
+
+public class LaptopApp{
+    public static void main(String[] args){
+      //creating the instance of Laptop class
+        Laptop l=new Laptop();
+        l.display();
+    }
+}
+
+// // **output** 
+// // Three parameterized constructor
+// // Two parameterized constructor
+// // One parameterized constructor
+// // Zero parameterized constructor
+// // Processor: i5
+// // Brand: hp
+// // Cost: 62000
+
+
+// Explanation of the Code:
+
+// 1. **Class Definition**:
+//    - We define a class named `Laptop` which represents laptop information.
+
+// 2. **Class Variables**:
+//    - `processor`, `brand`, and `cost` are member variables representing processor type, brand, and cost, respectively.
+
+// 3. **`display` Method**:
+//    - This method prints out the laptop details.
+
+// 4. **Constructors**:
+//    - There are several overloaded constructors to create a `Laptop` object with varying parameters.
+//    - Constructors are used to initialize the instance variables when an object of the class is created.
+//    - Constructors are invoked using `this` keyword to call other constructors based on the number of arguments provided.
+
+// 5. **Constructor Calls**:
+//    - Constructors call other constructors using the `this` keyword, passing appropriate arguments or default values.
+//    - The constructors are chained in a way that the constructor with three arguments is the base, and other constructors call it with default or specified values.
+
+// 6. **Create the Instance veriable of the Laptop Class inside the LaptopApp Class and invoke the dislpay methode.
+// 7. **Output Display**:
+//    - Each constructor prints a message indicating its execution to demonstrate which constructor is being called.
+
+// This design allows flexibility in creating `Laptop` objects with different combinations of parameters while reusing common initialization logic.
