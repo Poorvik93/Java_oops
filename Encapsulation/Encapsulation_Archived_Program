@@ -1,0 +1,69 @@
+//In the bellow Program we archive the Encapsulation by Using the set and get Method. 
+
+import java.util.Scanner;
+
+// Bank1 class representing a bank account.
+class Bank1 {
+    // Initial balance set to 10000.
+    private int balance = 10000;  
+    // Access key for the customer.
+    private int key = 5552;  
+
+    // Setter method to update balance based on the provided key and amount.
+    public void setData(int pin, int amount) {
+        if (key == pin) {
+            // Subtract the specified amount from the balance.
+            balance = balance - amount;  
+        } else {
+            // Display error message for an invalid customer.
+            System.out.println("Invalid customer");
+            // Exit the program. 
+            System.exit(0);
+        }
+    }
+
+    // Getter method to display the withdrawn amount and the new balance.
+    public void getData(int key, int amount) {
+        if (key == this.key) {
+            // Display the withdrawn amount.
+            System.out.println("The given money is: " + amount); 
+            // Display the updated balance.
+            System.out.println("The new balance is: " + balance);  
+        } else {
+            // Display error message for an invalid customer.
+            System.out.println("Invalid customer"); 
+            // Exit the program.
+            System.exit(0);  
+        }
+    }
+}
+
+import java.util.*;
+public class Customer {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Prompt for entering the access key.
+        System.out.println("Enter your key ");
+        // Read the access key from the user.
+        int key = sc.nextInt();  
+        // Prompt for entering the withdrawal amount.
+        System.out.println("Enter the withdraw amount");  
+        // Read the withdrawal amount from the user.
+        int amount = sc.nextInt();  
+        // Create an instance of the Bank1 class.
+        Bank1 b = new Bank1();  
+        // Call the setter method to update balance.
+        b.setData(key, amount);
+        // Call the getter method to display information.  
+        b.getData(key, amount);  
+    }
+}
+
+
+// Output:
+// Enter your key 
+// 5552
+// Enter the withdraw amount
+// 25
+// The given money is: 25
+// The new balance is: 9975
