@@ -1,0 +1,19 @@
+class Superclass {
+    public static void main(String[] args) {
+        System.out.println("Main method in Superclass");
+    }
+}
+
+class Subclass extends Superclass {
+    public static void main(String[] args) {
+        System.out.println("Main method in Subclass");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Calling the main methods of both classes
+        Superclass.main(args);  // Calls main method of Superclass
+        Subclass.main(args);    // Calls main method of Subclass
+    }
+}
