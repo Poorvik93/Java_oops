@@ -1,0 +1,82 @@
+import java.util.*;
+public class Carmain{
+    public static void main(String args[]){
+        //Encapsulation : attribute of a class will be hidden or private,
+                        // can be accesed only through mrthode (getters and setters)
+                        // you should make attributes peivate if you dont have a reason to make the 
+    
+        Car ca=new Car("chevolet ", "Camaro",2021);
+        // // Use when Creating a instance  
+        // Car ca1=new Car("Ford","Mustang",2023);
+        // ca1.copy(ca);
+
+
+    // // Use this when Creating a copy constructor to copy the values from one to another
+    //     Car ca1=new Car(ca);
+
+
+        
+        System.out.println(ca);
+        System.out.println(ca1);
+        System.out.println("************************");
+
+        System.out.println(ca.getMake());
+        System.out.println(ca.getModel());
+        System.out.println(ca.getYear());
+
+        System.out.println("************************");
+        System.out.println(ca1.getMake());
+        System.out.println(ca1.getModel());
+        System.out.println(ca1.getYear());
+    }
+
+}
+
+
+public class Car{
+    private String make;
+    private String model;
+    private int year;
+
+    Car(String make, String model,int year){
+        this.setMake(make);
+        this.setYear(year);
+        this.setModel(model);
+    }
+
+    // Creating a instance is a one methode other wise 
+    // Creating a copy constructor to copy the values from one to another
+    Car(Car otherCar){
+        this.copy(otherCar);
+    }
+
+    public String getMake(){
+        return make;
+    }
+
+    public String getModel(){
+        return model;
+    }
+
+    public int getYear(){
+        return year;
+    }
+    
+    public void setMake(String make){
+        this.make=make;
+    }
+    public void setModel(String model){
+        this.model=model;
+    }
+    public void setYear(int year){
+        this.year=year;
+    }
+
+    // Method to copy the attributes from another car
+    public void copy(Car otherCar) {
+        this.setMake(otherCar.getMake());
+        this.setModel(otherCar.getModel());
+        this.setYear(otherCar.getYear());
+    }
+
+}
