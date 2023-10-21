@@ -1,0 +1,66 @@
+public class Car {
+    // Private attributes to achieve encapsulation
+    private String make;
+    private String model;
+    private int year;
+
+    // Constructor to initialize the Car object
+    Car(String make, String model, int year) {
+        // Use setter methods to set the attributes
+        this.setMake(make);
+        this.setYear(year);
+        this.setModel(model);
+    }
+
+    // Getter method for make
+    public String getMake() {
+        return make;
+    }
+
+    // Getter method for model
+    public String getModel() {
+        return model;
+    }
+
+    // Getter method for year
+    public int getYear() {
+        return year;
+    }
+
+    // Setter method for make
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    // Setter method for model
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    // Setter method for year
+    public void setYear(int year) {
+        this.year = year;
+    }
+}
+
+public class Carmain {
+    public static void main(String args[]) {
+        // Creating a Car object
+        Car ca = new Car("Chevrolet", "Camaro", 2021);
+
+        // Changing the year using the setter
+        ca.setYear(2020);
+
+        // Getting and printing the car's attributes
+        System.out.println("Make: " + ca.getMake());
+        System.out.println("Model: " + ca.getModel());
+        System.out.println("Year: " + ca.getYear());
+    }
+}
+
+
+
+//Output :-
+//chevolet 
+//Camaro
+//2020
