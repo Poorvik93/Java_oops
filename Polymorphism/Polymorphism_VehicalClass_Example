@@ -1,0 +1,57 @@
+public class Main {
+    public static void main(String args[]) {
+        // This Java program demonstrates the concept of polymorphism, which allows objects
+        // of different classes to be treated as objects of a common superclass or interface.
+
+        // Create instances of different vehicle types
+        Car c = new Car();
+        Bicycle b = new Bicycle();
+        Boot bo = new Boot();
+
+        // Store these instances in an array of the common base type (assumed as "Vehicle")
+        Vehicle[] racers = {c, b, bo};
+
+        // Iterate through the array and invoke the "go" method on each vehicle
+        for (Vehicle x : racers) {
+            x.go();
+        }
+    }
+}
+//***************
+
+public class vehical{
+    public void go(){
+        
+    }
+}
+
+//***************
+
+public class Car extends vehical{
+    public void go(){
+        System.out.println("The Car begins moving ");
+    }
+}
+
+//***************
+
+public class Bicycle extends vehical{
+    public void go(){
+        System.out.println("The Bicycle begins moving ");
+    }
+}
+
+//***************
+
+class Boot extends vehical{
+public void go(){
+        System.out.println("The Boat begins moving ");
+    }
+}
+
+
+//Output :--
+
+// The Car begins moving 
+// The Bicycle begins moving
+// The Boat begins moving
