@@ -1,0 +1,21 @@
+public abstract class Vehicle{
+    abstract void go();
+}
+
+public class Car extends Vehicle{
+     void go(){
+            System.out.println("The driver drive the car :");
+    }
+
+}
+
+public class Main {
+    public static void main(String args[]){
+        // Abstraction = abstract classes cannot be instantiated , but they can he=ave a subclass
+        //               abstrsct method are decteared wihout implementation.
+
+        Car c=new Car();
+        c.go();
+
+    }
+}
