@@ -1,0 +1,73 @@
+
+
+// Importing input output classes
+import java.io.*;
+
+// Class 1
+// First Parent class
+class Parent1 {
+
+	// Method inside the first parent class
+	void fun() {
+
+		// Print statement if this method is called
+		System.out.println("Parent1");
+	}
+}
+
+
+// Class 2
+// Second Parent Class
+class Parent2 {
+
+	// Method inside the second parent class
+	void fun() {
+
+		// Print statement if this method is called
+		System.out.println("Parent2");
+	}
+}
+
+
+
+// Java Program to Illustrate Unsuitability of
+// Multiple Inheritance
+
+// Class 3
+// Trying to inherit from both parent classes
+
+//// this type is possible
+// ****************************************************
+// class Multipleinheritance {
+// 	// Main driver method
+// 	public static void main(String args[]) {
+
+// 		// Creating objects of both parent classes
+// 		Parent1 p1 = new Parent1();
+// 		Parent2 p2 = new Parent2();
+
+// 		// Trying to call functions of both parent classes
+// 		p1.fun(); // Calls Parent1's fun method
+// 		p2.fun(); // Calls Parent2's fun method
+// 	}
+// }
+
+// ******************************************************
+
+// Class 3
+// Trying to be child of both the classes
+
+// This type of multiple inheritance is not posible
+ class Multipleinheritance extends Parent1, Parent2{
+  // Main driver method 
+  public static void main(String args[]) {
+ 
+    // Creating object of class in main() method
+	
+ 	Multipleinheritance ml=new Multipleinheritance();
+    // Trying to call above functions of class where
+    // Error is thrown as this class is inheriting
+    // multiple classes
+    ml.fun();
+  }
+}
